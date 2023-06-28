@@ -53,7 +53,7 @@ function CommandPallete() {
     const filteredItems = api.filter((item) => {
       //returns the item that match the below condition
       return (
-        item.title.toLowerCase().startsWith(e.target.value.toLowerCase()) ||
+        item.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
         item.category === e.target.value ||
         item.price < e.target.value
       )
